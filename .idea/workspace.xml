@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33878b1c-e718-403e-a22f-46a6680380dc" name="Changes" comment="completed project">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/candidates.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/candidates.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/thankyou.html" beforeDir="false" afterPath="$PROJECT_DIR$/data/thankyou.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VoteMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VoteMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/User.java" afterDir="false" />
-    </list>
+    <list default="true" id="33878b1c-e718-403e-a22f-46a6680380dc" name="Changes" comment="added fixes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +66,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663062414234</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added fixes">
+      <created>1663071123169</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663071123169</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,6 +89,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="completed project" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed project" />
+    <MESSAGE value="added fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added fixes" />
   </component>
 </project>

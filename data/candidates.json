@@ -3,42 +3,42 @@
     "id": 1,
     "name": "Markus Sillman",
     "photo": "1.jpeg",
-    "vote": 25,
-    "votePercent": 30.120481927710845
+    "vote": 26,
+    "votePercent": 30.58823529411765
   },
   {
     "id": 2,
     "name": "Nikita Culler",
     "photo": "2.jpeg",
     "vote": 48,
-    "votePercent": 57.831325301204814
+    "votePercent": 56.470588235294116
   },
   {
     "id": 3,
     "name": "Tawanna Melanson",
     "photo": "3.jpeg",
-    "vote": 4,
-    "votePercent": 4.819277108433735
+    "vote": 5,
+    "votePercent": 5.88235294117647
   },
   {
     "id": 4,
     "name": "Brunilda Mikels",
     "photo": "4.jpeg",
     "vote": 3,
-    "votePercent": 3.614457831325301
+    "votePercent": 3.5294117647058822
   },
   {
     "id": 5,
     "name": "Hubert Takahashi",
     "photo": "5.jpeg",
     "vote": 1,
-    "votePercent": 1.2048192771084338
+    "votePercent": 1.1764705882352942
   },
   {
     "id": 6,
     "name": "Hershel Caffrey",
     "photo": "6.jpeg",
     "vote": 2,
-    "votePercent": 2.4096385542168677
+    "votePercent": 2.3529411764705883
   }
 ]
