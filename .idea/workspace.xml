@@ -1,52 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33878b1c-e718-403e-a22f-46a6680380dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/freemarker.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/candidates.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/candidates.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/css/candidates.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/images/01.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/images/1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/images/2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/images/3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/images/4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/images/5.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/images/6.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/images/anon.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/notfound.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/thankyou.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/users.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/voted.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/votes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labwork48.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VoteMachine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/BasicServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/ContentType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/Cookie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/ResponseCodes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/RouteHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/Candidate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/CandidateDataModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/CandidateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/FileService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/SingleCandidateDataModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/UserModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/freemarker.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/gson-2.8.9.jar" afterDir="false" />
+    <list default="true" id="33878b1c-e718-403e-a22f-46a6680380dc" name="Changes" comment="completed project">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/candidates.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/candidates.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/thankyou.html" beforeDir="false" afterPath="$PROJECT_DIR$/data/thankyou.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VoteMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VoteMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +66,14 @@
       <option name="presentableId" value="Default" />
       <updated>1662729200692</updated>
     </task>
+    <task id="LOCAL-00001" summary="completed project">
+      <created>1663062414234</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663062414234</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,5 +86,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="completed project" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed project" />
   </component>
 </project>

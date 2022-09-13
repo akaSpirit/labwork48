@@ -1,18 +1,22 @@
 {
   "marco": {
     "username": "marco",
-    "password": "marco"
+    "password": "marco",
+    "isVoted": true
   },
   "winston": {
     "username": "winston",
-    "password": "winston"
+    "password": "winston",
+    "isVoted": false
   },
   "amos": {
     "username": "amos",
-    "password": "amos"
+    "password": "amos",
+    "isVoted": false
   },
   "asd": {
     "username": "asd",
-    "password": "asd"
+    "password": "asd",
+    "isVoted": true
   }
 }

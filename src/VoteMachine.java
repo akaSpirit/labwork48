@@ -1,7 +1,6 @@
 import com.sun.net.httpserver.HttpExchange;
 import server.BasicServer;
 import server.ContentType;
-import server.Cookie;
 import server.Utils;
 import service.*;
 
@@ -14,12 +13,13 @@ public class VoteMachine extends BasicServer {
     private final UserModel userModel = new UserModel();
     private final Map<String, Boolean> isLogin = new HashMap<>();
     private User enteredUser;
+
     public VoteMachine(String host, int port) throws IOException {
         super(host, port);
         isLogin.put("status", true);
         service = new CandidateService();
         registerGet("/", this::mainHandler);
-        registerPost("/",this::logoutHandler);
+        registerPost("/", this::logoutHandler);
         registerPost("/vote", this::voteHandler);
         registerGet("/votes", this::votesHandler);
         registerGet("/candidate", this::candidateHandler);
@@ -37,12 +37,9 @@ public class VoteMachine extends BasicServer {
     private void logoutHandler(HttpExchange exchange) {
         String raw = getBody(exchange);
         Map<String, String> map = Utils.parseUrlEncoded(raw, "&");
-        String cookie = getCookie(exchange);
         if (map.containsKey("logout")) {
-            exchange.getResponseHeaders().add("Set-Cookie", Cookie.make("isVoted", "", 600, true).toString());
             enteredUser = null;
             redirect303(exchange, "/");
-            return;
         }
     }
 
@@ -59,21 +56,25 @@ public class VoteMachine extends BasicServer {
     }
 
     private void voteHandler(HttpExchange exchange) {
-        String cookieRow = getCookie(exchange);
-        Map<String, String> cookies = Utils.parseUrlEncoded(cookieRow, "; ");
-        if (cookies.containsKey("isVoted")) {
-            redirect303(exchange,"/voted.html");
+        String raw = getBody(exchange);
+        Map<String, String> parsed = Utils.parseUrlEncoded(raw, "&");
+        int id = Integer.parseInt(parsed.get("candidateId"));
+        Candidate candidate = service.getCandidate(id);
+        if(enteredUser != null) {
+            if (enteredUser.isVoted()) {
+                redirect303(exchange, "/voted.html");
+            } else {
+                candidate.setVote(candidate.getVote() + 1);
+                double voteSum = service.getAllCandidates().stream().mapToInt(Candidate::getVote).sum();
+                service.getAllCandidates().forEach(e -> e.setVotePercent((e.getVote() / voteSum) * 100));
+                enteredUser.setVoted(true);
+                userModel.getUsers().put(enteredUser.getUsername(), enteredUser);
+                FileService.writeUsers(userModel.getUsers());
+                FileService.writeCandidates(service.getAllCandidates());
+                redirect303(exchange, "/candidate?id=" + id);       //if id > 6 redirect notfound.html
+            }
         } else {
-            String raw = getBody(exchange);
-            Map<String, String> parsed = Utils.parseUrlEncoded(raw, "&");
-            int id = Integer.parseInt(parsed.get("candidateId"));
-            Candidate candidate = service.getCandidate(id);
-            candidate.setVote(candidate.getVote() + 1);
-            double voteSum = service.getAllCandidates().stream().mapToInt(Candidate::getVote).sum();
-            service.getAllCandidates().forEach(e -> e.setVotePercent((e.getVote() / voteSum) * 100));
-            setCookie(exchange, Cookie.make("isVoted", enteredUser.getUsername(), 600, true));
-            FileService.writeCandidates(service.getAllCandidates());
-            redirect303(exchange, "/candidate?id=" + id);       //if id > 6 redirect notfound.html
+            redirect303(exchange, "login.html");
         }
     }
 
@@ -95,8 +96,9 @@ public class VoteMachine extends BasicServer {
         if (candidate.isPresent()) {
             redirect303(exchange, "/thankyou?id=" + id);
             return;
+        } else {
+            redirect303(exchange, "notfound.html");
         }
-        redirect303(exchange, "notfound.html");
     }
 
     private CandidateDataModel getModel() {
@@ -116,7 +118,7 @@ public class VoteMachine extends BasicServer {
         if (userModel.getUsers().containsKey(username)) {
             if (userModel.getUsers().get(username).getPassword().equals(password)) {
                 enteredUser = userModel.getUsers().get(username);
-//                setCookie(exchange, Cookie.make("username", username, 600, true));
+                isLogin.put("status", true);
                 redirect303(exchange, "/");
             } else {
                 enteredUser = null;
